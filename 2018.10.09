@@ -101,3 +101,30 @@ MD5(test.txt)= 79:50:86:fd:74:d8:48:fe:7b:de:d8:77:10:a1:20:b4
 root@kali:~# md5sum test.txt
 795086fd74d848fe7bded87710a120b4  test.txt
 root@kali:~# 
+
+
+
+python2
+Python 2.7.14 (default, Sep 17 2017, 18:50:44) 
+[GCC 7.2.0] on linux2
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import hashlib
+>>> a='HappyCTFP'
+>>> print hashlib.md(a)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'module' object has no attribute 'md'
+>>> print hashlib.md5(a)
+<md5 HASH object @ 0x7f4ad8c0f710>
+>>> print hashlib.md5(a).hexdigest()
+414fdf02b37908aae45d7db5d597058f
+>>> print hashlib.sha1(a).hexdigest()
+6dfce807b281c6b1ab5d10945957193f765e4398
+>>> print hashlib.sha224(a).hexdigest()
+0a685a5a709c7cc99083cbf753333ef3afda2e20096303fbb92dc5c8
+>>> print hashlib.sha256(a).hexdigest()
+b0fde6b2d6c01b73d2024b2325128f4b33c16163ef9b813216de3708731acc09
+>>> print hashlib.sha384(a).hexdigest()
+94baa11135eb2bcfe6d78a5d34ccc01b80618e9f8b45fc00d684b25b06609c1e15e9cae0dd6d6299205b02708d12ee0e
+>>> print hashlib.sha512(a).hexdigest()
+87209e27c0bf6438db1f56d6ce7f3946868bbc03bd6adcf5ad80231e0bc0af0756ac5793a006a06350353c8de703183e46439fff228a56566dd63a8c7817fc22
