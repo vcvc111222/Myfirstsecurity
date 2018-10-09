@@ -93,3 +93,11 @@ enter des-cbc decryption password:
 root@kali:~# cat sol
 1
 root@kali:~# 
+
+
+ echo 'HappyHackingDay' > test.txt
+root@kali:~# openssl dgst -md5 -c test.txt
+MD5(test.txt)= 79:50:86:fd:74:d8:48:fe:7b:de:d8:77:10:a1:20:b4
+root@kali:~# md5sum test.txt
+795086fd74d848fe7bded87710a120b4  test.txt
+root@kali:~# 
