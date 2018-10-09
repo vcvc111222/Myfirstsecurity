@@ -76,3 +76,20 @@ XOR運算[python2]
 >>> k2=bin(k^a^k)
 >>> print k2
 0b1010111011010010110101101101001
+
+
+echo "1" > infile
+root@kali:~# cat infile
+1
+root@kali:~# openssl des -in infile -out infile.des
+enter des-cbc encryption password:
+Verifying - enter des-cbc encryption password:
+root@kali:~# cat infile
+1
+root@kali:~# cat infile.des
+Salted__��""�
+�ރ�" �aroot@kali:~# openssl des -d -in infile.des -out sol
+enter des-cbc decryption password:
+root@kali:~# cat sol
+1
+root@kali:~# 
