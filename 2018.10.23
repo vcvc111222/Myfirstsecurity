@@ -1,3 +1,6 @@
+https://colab.research.google.com/drive/1_be3NmoTf-j8zD09fBUixMMV3RKZakEv#scrollTo=2bySeeTov6Yv
+
+
 import tensorflow as tf
 from tensorflow import keras
 
